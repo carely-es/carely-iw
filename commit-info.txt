@@ -1,0 +1,6 @@
+Texto de un commit:
++archivo,-archivo,*archivo
+
++ archivo => Para los archivos que se añaden
+- archivo => Para los archivos que se han borrado
+* archivo => Para los archivos que se han modificado
