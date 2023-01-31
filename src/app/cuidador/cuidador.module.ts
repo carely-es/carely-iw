@@ -20,7 +20,8 @@ import { CuidadorRoutingModule } from './cuidador-routing.module';
     CommonModule,
     SharedModule,
     CuidadorRoutingModule
-  ],exports: [CuidadorItemComponent]
+  ],
+  exports: [CuidadorItemComponent]
 })
 export class CuidadorModule { }
 

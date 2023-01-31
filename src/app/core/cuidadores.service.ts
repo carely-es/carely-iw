@@ -10,7 +10,7 @@ import { Cuidador } from '../shared/cuidador';
   providedIn: 'root',
 })
 export class CuidadoresService {
-  private CuidadorUrl = 'api/Cuidador';
+  private CuidadorUrl = 'api/cuidadores';
 
   constructor(private http: HttpClient) {}
 
@@ -39,7 +39,7 @@ export class CuidadoresService {
   getCuidadorById(id: number): Observable<Cuidador> {
     const url = `${this.CuidadorUrl}/${id}`;
     return this.http.get<Cuidador>(url).pipe(
-      tap((data) => console.log('getProduct: ' + JSON.stringify(data))),
+      tap((data) => console.log('getCuidador: ' + JSON.stringify(data))),
       catchError(this.handleError)
     );
   }
@@ -50,7 +50,7 @@ export class CuidadoresService {
     return this.http
       .post<Cuidador>(this.CuidadorUrl, cuidador, { headers: headers })
       .pipe(
-        tap((data) => console.log('createProduct: ' + JSON.stringify(data))),
+        tap((data) => console.log('createCuidador ' + JSON.stringify(data))),
         catchError(this.handleError)
       );
   }
@@ -59,7 +59,7 @@ export class CuidadoresService {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const url = `${this.CuidadorUrl}/${id}`;
     return this.http.delete<Cuidador>(url, { headers: headers }).pipe(
-      tap((data) => console.log('deleteProduct: ' + id)),
+      tap((data) => console.log('deleteCuidador: ' + id)),
       catchError(this.handleError)
     );
   }
@@ -68,7 +68,7 @@ export class CuidadoresService {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const url = `${this.CuidadorUrl}/${cuidador.id}`;
     return this.http.put<Cuidador>(url, cuidador, { headers: headers }).pipe(
-      tap(() => console.log('updateProduct: ' + cuidador.id)),
+      tap(() => console.log('updateCuidador: ' + cuidador.id)),
       // Return the product on an update
       map(() => cuidador),
       catchError(this.handleError)

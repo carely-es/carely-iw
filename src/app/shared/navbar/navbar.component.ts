@@ -14,9 +14,23 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {}
 
-  newProduct() {
+  newCuidador() {
     // Get max product Id from the product list
     this.cuidador.getMaxCuidadorId().subscribe((data) => (this.id = data));
-    this.router.navigate(['/products', this.id, 'new']);
+    this.router.navigate(['/cuidadores', this.id, 'new']);
   }
+
+
+  loginCliente(){
+    this.cuidador.getMaxCuidadorId().subscribe((data) => (this.id = data));
+    this.router.navigate(['/cliente',this.id,'new']);}
+  
+    loginCuidador(){
+    this.cuidador.getMaxCuidadorId().subscribe((data) => (this.id = data));
+    this.router.navigate(['/cuidadores',this.id,'new']);}
+    
+  // signinCliente(){
+  //   this.router.navigate(['/cliente',this.id,'new']);}
+  // signinCuidador(){
+  //   this.router.navigate(['/cuidador',this.id,'new']);}
 }

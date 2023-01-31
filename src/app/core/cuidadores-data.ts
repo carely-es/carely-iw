@@ -2,7 +2,7 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 export class CuidadorData implements InMemoryDbService {
   createDb() {
-    let products = [
+    let cuidadores = [
       {
         id: 0,
         nombre: 'Ander',
@@ -58,6 +58,6 @@ export class CuidadorData implements InMemoryDbService {
         imagen: 'https://picsum.photos/820/320?grayscale',
       },
     ];
-    return { products: products };
+    return { cuidadores: cuidadores };
   }
 }

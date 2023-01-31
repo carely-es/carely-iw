@@ -9,7 +9,9 @@ import { Cuidador } from '../shared/cuidador';
 })
 export class HomeComponent implements OnInit {
   cuidadores: Cuidador[] = [];
-  constructor(private cuidadorService: CuidadoresService) {}
+  constructor(private cuidadorService: CuidadoresService) {
+
+  }
 
   ngOnInit() {
     this.cuidadorService
