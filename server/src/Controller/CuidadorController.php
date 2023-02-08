@@ -108,7 +108,7 @@ class CuidadorController extends AbstractController
         $cuidador->setPrecio($content->precio);
         $cuidador->setDescripcion($content->descripcion);
         $categoria = $doctrine->getRepository(Categoria::class)->findOneBy([
-                'nombre'=>$content->categorias
+                'id'=>$content->categorias
             ]);
         $cuidador->setCategorias($categoria);
         $cuidador->setImagen($content->imagen);

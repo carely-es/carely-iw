@@ -39,14 +39,28 @@
             </div>
 
 
-            <div class="form-group row mb-2">
+            <!-- <div class="form-group row mb-2">
                 <label class="col-md-2 col-form-label" for="categoriesId">Categories</label>
 
                 <div class="col-md-8">
                     <input class="form-control" id="categoriesId" placeholder="Categories" formControlName="categorias"
                         name="categorias" />
                 </div>
+            </div> -->
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="categoriesId">Categories</label>
+
+                <div class="col-md-8">
+                    <select class="form-select" aria-label="Default select example" id="categoriesId" placeholder="Categories" formControlName="categorias"
+                    name="categorias">
+                        <!-- <option selected>Seleccione categoria</option> -->
+                        <option value="1">Animales</option>
+                        <option value="2">Mayores</option>
+                        <option value="3">Niñes</option>
+                    </select>
+                </div>
             </div>
+            
 
             <div class="form-group row mb-2">
                 <label class="col-md-2 col-form-label" for="imageId">Imagen</label>
