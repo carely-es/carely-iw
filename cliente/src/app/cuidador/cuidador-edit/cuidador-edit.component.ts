@@ -69,7 +69,7 @@ export class CuidadorEditComponent implements OnInit {
     }
     this.cuidador = cuidador;
     this.pageTitle = `Edit Cuidador: ${this.cuidador.nombre} ${this.cuidador.apellido}`;
-
+    
     // Update the data on the form
     this.cuidadorForm.patchValue({
       nombre: this.cuidador.nombre,

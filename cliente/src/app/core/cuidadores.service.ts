@@ -10,7 +10,7 @@ import { Cuidador } from '../shared/cuidador';
   providedIn: 'root',
 })
 export class CuidadoresService {
-  private CuidadorUrl = 'http://localhost:8000';
+  private CuidadorUrl = 'https://localhost:8000';
 
   constructor(private http: HttpClient) {}
 
@@ -76,7 +76,7 @@ export class CuidadoresService {
     return this.http.put<Cuidador>(url, cuidador, { headers: headers }).pipe(
       tap(() => console.log('updateCuidador: ' + cuidador.id)),
       // Return the product on an update
-      map(() => cuidador),
+      map(()=> cuidador),
       catchError(this.handleError)
     );
   }

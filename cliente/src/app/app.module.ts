@@ -12,6 +12,8 @@ import { ClienteDetailComponent } from './cliente/cliente-detail/cliente-detail.
 import { ClienteEditComponent } from './cliente/cliente-edit/cliente-edit.component';
 import { ClienteItemComponent } from './cliente/cliente-item/cliente-item.component';
 import { ClienteNewComponent } from './cliente/cliente-new/cliente-new.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -24,7 +26,9 @@ import { ClienteNewComponent } from './cliente/cliente-new/cliente-new.component
         ClienteDetailComponent,
         ClienteEditComponent,
         ClienteItemComponent,
-        ClienteNewComponent
+        ClienteNewComponent,
+        RegisterComponent,
+        LoginComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
