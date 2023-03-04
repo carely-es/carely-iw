@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: ${APP_NAME}-frontend
+    ports: 
+      - 80:80
+    networks:
+      net:
+          ipv4_address: 172.21.38.4
+
+
+networks: 
+  net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.21.38.0/24

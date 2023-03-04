@@ -10,7 +10,7 @@ import { Cuidador } from '../shared/cuidador';
   providedIn: 'root',
 })
 export class CuidadoresService {
-  private CuidadorUrl = 'http://localhost:8000';
+  private CuidadorUrl = 'http://front-carely.us-east-1.elasticbeanstalk.com/';
 
   constructor(private http: HttpClient) {}
 
